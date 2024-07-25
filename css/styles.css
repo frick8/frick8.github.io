@@ -61,6 +61,11 @@ main {
     padding: 20px;
     background-color: #1e1e1e;
     border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    padding: 20px 0;
 }
 
 .intro h2 {
