@@ -1,7 +1,8 @@
 /* Reset some default styles */
-body, h1, h2, p {
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     padding: 20px;
+    margin: 0;
 }
 
 header {
@@ -36,10 +38,11 @@ nav ul {
     padding: 10px;
     background-color: #222;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
@@ -54,6 +57,15 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ff9800;
     color: #121212;
+}
+
+a {
+    color: #ff9800; /* Change default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #ffb74d; /* Change link color on hover */
 }
 
 main {
@@ -79,10 +91,60 @@ main {
     margin: 0 auto;
 }
 
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+section p, section ul {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
 }
