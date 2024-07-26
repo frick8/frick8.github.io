@@ -4,10 +4,11 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
-    background: #1f1f1f;
+    background: linear-gradient(135deg, #6200ea, #bb86fc);
     padding: 20px;
     text-align: center;
     position: sticky;
@@ -33,14 +34,18 @@ header nav a {
 }
 
 header nav a:hover {
-    background-color: #bb86fc;
-    color: #121212;
+    background-color: #3700b3;
+    color: #ffffff;
 }
 
 .container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 h1, h2 {
@@ -49,6 +54,10 @@ h1, h2 {
 
 section {
     margin-bottom: 20px;
+    background: linear-gradient(135deg, #333333, #1f1f1f);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 section img {
@@ -60,6 +69,15 @@ section img {
 section img:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+a.button, a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+a.button:hover, a:hover {
+    color: #ffb74d;
 }
 
 a.button {
@@ -80,7 +98,7 @@ a.button:hover {
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #1f1f1f;
+    background: linear-gradient(135deg, #6200ea, #bb86fc);
     position: sticky;
     bottom: 0;
     width: 100%;
