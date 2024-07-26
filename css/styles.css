@@ -1,10 +1,11 @@
-body {
+body, html {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1f1f1f, #121212);
     color: #e0e0e0;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100%;
 }
 
 header {
@@ -18,11 +19,11 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
     margin: 10px auto;
-    transition: top 0.3s;
+    transition: top 0.2s ease-in-out;
 }
 
 header.hidden {
-    top: -150px; /* Adjusted to ensure it moves out of view */
+    top: -200px;
 }
 
 header nav {
@@ -138,7 +139,7 @@ footer {
         top: 0;
     }
     header.hidden {
-        top: -200px; /* Adjusted for mobile view */
+        top: -200px;
     }
     header nav {
         flex-direction: column;
