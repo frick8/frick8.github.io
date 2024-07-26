@@ -6,6 +6,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     height: 100%;
+    background-color: #121212; /* Ensures background color is consistent */
     opacity: 0; /* Initially hidden */
     animation: fadeIn 1s ease-in-out forwards; /* Fade-in effect */
 }

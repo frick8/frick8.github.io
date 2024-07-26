@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
+        if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
             header.classList.add("hidden");
-        } else {
+        } else if (scrollTop < lastScrollTop) {
             header.classList.remove("hidden");
         }
         lastScrollTop = scrollTop;
