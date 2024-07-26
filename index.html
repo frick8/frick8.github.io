@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-toggle">
-            <span>&#9776;</span>
-        </div>
-        <nav>
+    <div class="container">
+        <nav id="sidebar">
+            <h2>Menu</h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -20,24 +18,25 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div id="content">
+            <header>
+                <h1>Welcome to My Portfolio</h1>
+            </header>
+            <main>
+                <section>
+                    <h2>Introduction</h2>
+                    <p>Hi! I'm a seasoned Roblox developer with extensive experience in creating modular code and utilizing external tools like Rojo. Check out my projects to see what I've been working on!</p>
+                </section>
+                <section>
+                    <h2>Featured Projects</h2>
+                    <p>Explore some of my top projects, including Hero Quest and more.</p>
+                    <a href="projects.html" class="button">View Projects</a>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2024 My Portfolio</p>
+            </footer>
+        </div>
     </div>
-    <div class="main-content">
-        <header>
-            <div class="header-content">
-                <h1>My Portfolio</h1>
-                <p>Welcome to my professional portfolio</p>
-            </div>
-        </header>
-        <main>
-            <section class="intro">
-                <h2>Welcome!</h2>
-                <p>Discover my projects, skills, and experiences.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2024 My Portfolio</p>
-        </footer>
-    </div>
-    <script src="js/scripts.js"></script>
 </body>
 </html>
