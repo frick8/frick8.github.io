@@ -24,6 +24,7 @@ body {
     position: fixed;
     height: 100%;
     overflow: auto;
+    z-index: 2;
 }
 
 #sidebar.collapsed {
@@ -77,6 +78,7 @@ body {
     margin-left: 250px;
     overflow-y: auto;
     transition: margin-left 0.3s ease-in-out;
+    z-index: 1;
 }
 
 #sidebar.collapsed + #content {
