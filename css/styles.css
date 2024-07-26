@@ -21,16 +21,35 @@ body {
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: width 0.3s ease-in-out;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+#sidebar.collapsed {
+    width: 60px;
 }
 
 #sidebar h2 {
     color: #bb86fc;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#toggle-button {
+    background: none;
+    border: none;
+    color: #bb86fc;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
 }
 
 #sidebar ul {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 #sidebar ul li {
@@ -55,7 +74,13 @@ body {
 #content {
     flex: 1;
     padding: 20px;
+    margin-left: 250px;
     overflow-y: auto;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+#sidebar.collapsed + #content {
+    margin-left: 60px;
 }
 
 header h1 {
@@ -70,6 +95,15 @@ section {
 section h2 {
     color: #bb86fc;
     margin-bottom: 10px;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffb74d;
 }
 
 a.button {
@@ -145,6 +179,10 @@ footer {
     }
 
     #content {
-        margin-left: 0;
+        margin-left: 60px;
+    }
+
+    #toggle-button {
+        display: block;
     }
 }
