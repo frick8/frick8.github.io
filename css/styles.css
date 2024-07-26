@@ -92,3 +92,59 @@ footer {
     padding: 10px 0;
     border-top: 1px solid #333;
 }
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 60px;
+        padding: 10px;
+    }
+
+    #sidebar h2,
+    #sidebar ul li {
+        display: none;
+    }
+
+    #sidebar ul li a {
+        text-align: center;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+}
