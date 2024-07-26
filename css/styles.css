@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #6200ea, #bb86fc);
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
     padding: 20px;
     text-align: center;
     position: sticky;
@@ -16,6 +16,9 @@ header {
     width: 100%;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 1200px;
 }
 
 header nav {
@@ -46,6 +49,7 @@ header nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     overflow: hidden;
+    margin-top: 20px;
 }
 
 h1, h2 {
@@ -97,12 +101,12 @@ a.button:hover {
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(135deg, #6200ea, #bb86fc);
-    position: sticky;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    border-radius: 10px;
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 @keyframes fadeIn {
