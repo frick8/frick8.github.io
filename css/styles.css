@@ -23,7 +23,7 @@ header {
 }
 
 header.hidden {
-    top: -220px; /* Adjust as needed based on header height */
+    top: -320px; /* Adjust as needed based on header height */
 }
 
 header nav {
@@ -139,7 +139,7 @@ footer {
         top: 0;
     }
     header.hidden {
-        top: -200px; /* Adjusted for complete hiding on mobile */
+        top: -300px; /* Adjusted for complete hiding on mobile */
     }
     header nav {
         flex-direction: column;
