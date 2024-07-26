@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.getElementById("sidebar");
-    const toggleButton = document.getElementById("toggle-button");
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
 
-    toggleButton.addEventListener("click", function() {
-        sidebar.classList.toggle("collapsed");
-        document.getElementById("content").classList.toggle("collapsed");
-    });
-
-    window.addEventListener("resize", function() {
-        if (window.innerWidth <= 768) {
-            sidebar.classList.add("collapsed");
-            document.getElementById("content").classList.add("collapsed");
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            header.classList.add("hidden");
         } else {
-            sidebar.classList.remove("collapsed");
-            document.getElementById("content").classList.remove("collapsed");
+            header.classList.remove("hidden");
         }
+        lastScrollTop = scrollTop;
     });
 });
