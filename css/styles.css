@@ -23,7 +23,7 @@ header {
 }
 
 header.hidden {
-    top: -180px; /* Adjust as needed based on header height */
+    top: -220px; /* Adjust as needed based on header height */
 }
 
 header nav {
