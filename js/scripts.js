@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add("fade-in");
+
     let lastScrollTop = 0;
     const header = document.querySelector("header");
 

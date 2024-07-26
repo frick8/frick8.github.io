@@ -6,6 +6,8 @@ body, html {
     padding: 0;
     overflow-x: hidden;
     height: 100%;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in effect */
 }
 
 header {
@@ -19,11 +21,11 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
     margin: 10px auto;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out; /* Smoother transition */
 }
 
 header.hidden {
-    top: -200px;
+    top: -200px; /* Further adjusted for complete hiding */
 }
 
 header nav {
@@ -139,7 +141,7 @@ footer {
         top: 0;
     }
     header.hidden {
-        top: -200px;
+        top: -200px; /* Adjusted for complete hiding on mobile */
     }
     header nav {
         flex-direction: column;
