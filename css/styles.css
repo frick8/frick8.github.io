@@ -6,29 +6,34 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
     color: #e0e0e0;
     line-height: 1.6;
     padding: 20px;
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #333;
+    background: linear-gradient(to right, #ff9800, #ff5722);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
 }
 
 header h1 {
-    color: #ff9800;
+    color: #ffffff;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2em;
+    color: #ffffff;
 }
 
 nav ul {
@@ -36,9 +41,11 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #222;
+    background: rgba(34, 34, 34, 0.9);
     border-radius: 10px;
     flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
 }
 
 nav ul li {
@@ -71,9 +78,10 @@ a:hover {
 main {
     text-align: center;
     padding: 20px;
-    background-color: #1e1e1e;
+    background: rgba(30, 30, 30, 0.9);
     border-radius: 10px;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .intro {
@@ -83,6 +91,7 @@ main {
 .intro h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
 }
 
 .intro p {
@@ -94,8 +103,10 @@ main {
 section {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #2a2a2a;
+    background: rgba(42, 42, 42, 0.9);
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
 }
 
 section h2 {
@@ -124,9 +135,33 @@ section img {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background: linear-gradient(to right, #ff5722, #ff9800);
     border-radius: 10px;
     margin-top: 20px;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 /* Responsive design */
