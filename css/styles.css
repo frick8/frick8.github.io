@@ -1,14 +1,11 @@
-html, body {
+body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1f1f1f, #121212);
     color: #e0e0e0;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 100%;
     background-color: #121212; /* Ensures background color is consistent */
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 1s ease-in-out forwards; /* Fade-in effect */
 }
 
 header {
@@ -22,11 +19,11 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
     margin: 10px auto;
-    transition: top 0.2s ease-in-out; /* Smoother transition */
+    transition: top 0.3s;
 }
 
 header.hidden {
-    top: -200px; /* Further adjusted for complete hiding */
+    top: -180px; /* Adjust as needed based on header height */
 }
 
 header nav {
@@ -138,12 +135,6 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    header {
-        top: 0;
-    }
-    header.hidden {
-        top: -200px; /* Adjusted for complete hiding on mobile */
-    }
     header nav {
         flex-direction: column;
     }
