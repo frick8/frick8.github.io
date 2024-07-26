@@ -9,4 +9,4 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebar.style.transform = 'translateX(0)';
         }
     });
-});
+}); 
