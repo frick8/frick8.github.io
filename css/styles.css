@@ -115,6 +115,173 @@ footer {
     max-width: calc(100% - 40px);
 }
 
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    max-width: 100%;
+    position: relative;
+}
+
+.carousel-images img, .carousel-images video {
+    width: 100%;
+    flex: 0 0 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #bb86fc;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    font-size: large;
+    border-radius: 8px;
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+.video-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Position the video to occupy full width */
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+    object-fit: contain;
+    z-index: 1; /* Ensure video is above the background */
+    -webkit-appearance: none; /* Remove default webkit controls */
+    appearance: none; /* Remove default controls in other browsers */
+    border-radius: 10px;
+}
+
+/* Ensure controls are properly aligned within the video container */
+.custom-video-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    padding: 8px;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Adjust based on padding */
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure controls are above the video */
+}
+
+/* Button styling */
+.custom-video-controls button {
+    background: none;
+    border: none;
+    color: #bb86fc;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 0 10px; /* Add padding between icons */
+}
+
+/* Play/Pause Button */
+.custom-video-controls .play-pause::before {
+    content: "\f04b"; /* FontAwesome pause icon by default */
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    color: #bb86fc;
+    font-size: 18px;
+}
+
+.custom-video-controls .play-pause.paused::before {
+    content: "\f04c"; /* FontAwesome play icon */
+}
+
+.custom-video-controls .play-pause:not(.paused)::before {
+    content: "\f04b"; /* FontAwesome pause icon */
+}
+
+/* Volume Button */
+.custom-video-controls .volume::before {
+    content: "\f028"; /* FontAwesome volume icon */
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    color: #bb86fc;
+    font-size: 18px;
+    margin-right: 10px; /* Add margin to space out icons */
+}
+
+.custom-video-controls .volume.muted::before {
+    content: "\f026"; /* FontAwesome mute icon */
+}
+
+/* Fullscreen Button */
+.custom-video-controls .fullscreen::before {
+    content: "\f065"; /* FontAwesome fullscreen icon */
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    color: #bb86fc;
+    font-size: 18px;
+}
+
+/* Progress bar styling */
+.custom-video-controls .progress-bar {
+    flex: 1;
+    margin: 0 10px;
+    height: 5px;
+    background: #bb86fc;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.custom-video-controls .progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ffb74d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Time indicator */
+.custom-video-controls .time {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
